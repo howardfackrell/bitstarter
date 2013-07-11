@@ -89,8 +89,6 @@ if(require.main == module) {
 		.option('-u, --url <url>', 'url to index.html', clone(assertUrlExists), "")
         .parse(process.argv);
 	var checkJson = "";
-	console.log(program.url);
-	console.log(program.file);
 	if (program.url) {
 		checkJson = cheerioHtmlUrl(program.url, program.checks);
 	} else {	
